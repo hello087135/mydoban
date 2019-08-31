@@ -1,10 +1,5 @@
 <template>
-  <div>
-
-
-
-    
-  </div>
+  <div>shouye</div>
 </template>
 
 <script>

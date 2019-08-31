@@ -19,5 +19,7 @@ html {
 body {
   font-size: 0.16rem;
 }
-
+a {
+  text-decoration: none;
+}
 </style>
