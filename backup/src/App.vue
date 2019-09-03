@@ -17,7 +17,7 @@ html {
   font-size: 31.25vw;
 }
 body {
-  font-size: 0.16rem;
+  font-size: 0.14rem;
 }
 a {
   text-decoration: none;
