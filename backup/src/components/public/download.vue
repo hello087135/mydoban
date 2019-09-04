@@ -1,13 +1,15 @@
 <template>
   <div class="download">
-    <a href="#">打开app浏览更多</a>
+    <a href="#">{{mes}}</a>
     <button class="btn-left">打开</button>
     <button class="btn-right">极速下载</button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["mes"]
+};
 </script>
 
 <style scoped>

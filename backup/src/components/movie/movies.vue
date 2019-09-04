@@ -1,10 +1,10 @@
 <template>
-  <div class="movies">
-    <img :src="obj.images.small" />
-    <p>{{obj.title}}</p>
+  <div class="movies" @click="fun()">
+    <img :src="imgUrl" />
+    <p>{{title}}</p>
     <div class="score">
-      <five-start :score="obj.rating.average"></five-start>
-      <span>{{obj.rating.average}}</span>
+      <five-start :score="average"></five-start>
+      <span>{{average}}</span>
     </div>
   </div>
 </template>
@@ -13,9 +13,14 @@
 // 1-1引入五星组件
 import fiveStart from "./fiveStart";
 export default {
-  props: ["obj"],
+  props: ["title", "average", "imgUrl", "obj", "id"],
   components: {
     fiveStart
+  },
+  methods: {
+    fun() {
+      this.$router.push({ name: "movieDetail", query: { id: this.id } });
+    }
   }
 };
 </script>
@@ -42,5 +47,6 @@ export default {
   overflow: hidden;
   text-align: center;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>

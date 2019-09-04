@@ -21,7 +21,7 @@ export default {
         //   1-3把前几个设为2
         arr[i] = 2;
       }
-      parseFloat(this.score) % 2 == 0 ? (arr[a] = 2) : (arr[a] = 1);
+      parseFloat(this.score) % 2 == 0 ? (arr[a] = 0) : (arr[a] = 1);
       return arr;
     }
   }

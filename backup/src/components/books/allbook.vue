@@ -11,9 +11,8 @@
         :key="i"
         :obj="v"
         :title="v.title"
-        :imgUrl="v.images.small"
+        :imgUrl="v.image"
         :average="v.rating.average"
-        :id="v.id"
       ></movies>
     </div>
   </div>
@@ -21,10 +20,10 @@
 
 <script>
 //调用子组件
-import movies from "./movies";
+import movies from "../movie/movies";
 export default {
   //接受参数
-  props: ["title", "average", "imgUrl", "obj"],
+  props: ["title", "obj"],
   components: {
     movies
   }

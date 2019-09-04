@@ -8,6 +8,7 @@ import broadcast from '../pages/broadcast'
 import change from '../pages/change'
 import group from '../pages/group'
 import movie from '../pages/movie'
+import movieDetail from '../pages/movieDetail'
 
 Vue.use(Router)
 
@@ -44,5 +45,9 @@ export default new Router({
     path: '/movie',
     name: 'movie',
     component: movie
+  }, {
+    path: '/moviedetail',
+    name: 'movieDetail',
+    component: movieDetail
   }]
 })

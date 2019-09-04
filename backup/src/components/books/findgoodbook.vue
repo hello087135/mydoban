@@ -1,7 +1,7 @@
 <template>
   <div class="findGoodMovie">
     <p>
-      <span>发现好电影</span>
+      <span>发现好书</span>
       <span class="right">更多</span>
     </p>
     <div class="box">
@@ -21,8 +21,8 @@ export default {
   },
   mounted() {
     this.axios.get(this.url).then(ok => {
-      console.log(ok.data.faxianhaodianying);
-      this.obj = ok.data.faxianhaodianying;
+      console.log(ok.data.goodBook);
+      this.obj = ok.data.goodBook;
     });
   },
   props: ["url"]
