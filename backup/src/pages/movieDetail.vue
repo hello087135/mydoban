@@ -15,6 +15,13 @@
       ></movie-detail>
       <movie-introduction :title="obj[0].title"></movie-introduction>
       <movie-classify :arr1="obj[0].genres"></movie-classify>
+      <movie-img :imgUrl="obj[0].images.small"></movie-img>
+      <h4>无问东西的短评</h4>
+      <log></log>
+      <log></log>
+      <log></log>
+      <find-good-movie url="/faxianhaodianying"></find-good-movie>
+      <logo></logo>
     </div>
   </div>
 </template>
@@ -25,6 +32,10 @@ import download from "../components/public/download";
 import movieDetail from "../components/movieDetail/movieDetail";
 import movieIntroduction from "../components/movieDetail/movieIntroduction";
 import movieClassify from "../components/movieDetail/movieClassify";
+import movieImg from "../components/movieDetail/movieImg";
+import log from "../components/broadcast/log";
+import findGoodMovie from "../components/movie/findGoodMovie";
+import logo from "../components/public/logo";
 export default {
   data() {
     return {
@@ -44,10 +55,13 @@ export default {
     download,
     movieDetail,
     movieIntroduction,
-    movieClassify
+    movieClassify,
+    movieImg,
+    log,
+    findGoodMovie,
+    logo
   },
   created() {
-    console.log(this.$route.query.id);
     this.axios.get("/movie").then(ok => {
       this.obj = ok.data.movie.filter((v, i) => {
         if (v.id == this.$route.query.id) {
@@ -70,7 +84,6 @@ export default {
       for (let i in this.obj[0].casts) {
         arr.push(this.obj[0].casts[i].name);
       }
-      console.log(arr);
       return arr;
     }
   }
@@ -84,5 +97,11 @@ export default {
 .box {
   width: 2.9rem;
   margin: 0 auto;
+}
+h4 {
+  margin-top: 0.1rem;
+  color: #aaa;
+  font-size: 0.12rem;
+  font-weight: 200;
 }
 </style>

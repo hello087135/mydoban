@@ -22,4 +22,10 @@ p {
   font-size: 0.12rem;
   color: #aaa;
 }
+a {
+  font-size: 0.24rem;
+}
+h4 {
+  font-weight: 200;
+}
 </style>

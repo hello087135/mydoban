@@ -9,6 +9,7 @@ import change from '../pages/change'
 import group from '../pages/group'
 import movie from '../pages/movie'
 import movieDetail from '../pages/movieDetail'
+import indexDetail from '../pages/indexDetail'
 
 Vue.use(Router)
 
@@ -49,5 +50,9 @@ export default new Router({
     path: '/moviedetail',
     name: 'movieDetail',
     component: movieDetail
+  }, {
+    path: '/indexdetail',
+    name: 'indexDetail',
+    component: indexDetail
   }]
 })

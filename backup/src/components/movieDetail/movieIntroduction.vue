@@ -1,4 +1,5 @@
 <template>
+  <!-- 电影的简介 -->
   <div class="movieIntroduction">
     <h4>{{title}}的简介</h4>
     <p>

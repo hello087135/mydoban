@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="indexThumbnails">
+    <div class="indexThumbnails" @click="fun()">
       <div class="left">
         <h4>{{obj.title}}</h4>
         <p>{{content}}</p>
@@ -25,6 +25,14 @@ export default {
       let temp = this.obj.content.split("<");
       content = temp[0].substring(0, 50);
       return content + "...";
+    }
+  },
+  methods: {
+    fun() {
+      this.$router.push({
+        name: "indexDetail",
+        query: { id: this.obj.id, obj: this.obj }
+      });
     }
   }
 };

@@ -5,7 +5,7 @@
       <hr />
     </div>
     <div class="box">
-      <all-movie :obj1="obj1" :obj2="obj2" :obj3="obj3" :title="title"></all-movie>
+      <all-movie :obj1="obj1" :obj2="obj2" :obj3="obj3" :title="title" typ="1"></all-movie>
       <find-good-movie :url="url"></find-good-movie>
       <browse></browse>
       <logo></logo>
