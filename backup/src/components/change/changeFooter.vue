@@ -2,7 +2,7 @@
   <div class="changeFooter">
     <p>
       <router-link to="/register">注册豆瓣</router-link>
-      <router-link to="/register">登入豆瓣</router-link>
+      <router-link to="/login">登入豆瓣</router-link>
     </p>
     <p>
       <a href="#">使用桌面版</a>

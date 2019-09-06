@@ -5,9 +5,14 @@
       <span class="right">更多</span>
     </p>
     <div class="box">
-      <div v-for="(v, i) in obj" :key="i" :class="v.line?'box1':'boxs'">
-        <a :href="v.href" :style="'color:'+v.color">{{v.title}}</a>
-      </div>
+      <a
+        :href="v.href"
+        :style="'color:'+v.color"
+        v-for="(v, i) in obj"
+        :key="i"
+        v-if="!v.line"
+      >{{v.title}}</a>
+      <br v-else />
     </div>
   </div>
 </template>
@@ -45,7 +50,8 @@ export default {
 .box {
   width: 2.9rem;
   overflow: auto;
-  display: flex;
+  /* display: flex; */
+  white-space: nowrap;
 }
 .boxs {
   padding: 0.1rem;
@@ -54,8 +60,15 @@ export default {
   margin-top: 0.1rem;
   margin-right: 0.1rem;
 }
-.boxs > a {
+.box > a {
   white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 0.1rem;
+  border: 1px solid #ffac2d;
+  border-radius: 0.05rem;
+  margin-top: 0.1rem;
+  margin-right: 0.1rem;
 }
 .box1 {
   width: 1px;

@@ -96,4 +96,20 @@ app.post("/login", ue, (req, res) => {
         }
     })
 });
+app.get("/check", (req, res) => {
+    let token = req.query.token;
+    jwt.verify(token, "sas", (err, ok) => {
+        if (ok.loginOk) {
+            res.send({
+                loginOk: true,
+                username: ok.username
+            })
+        } else {
+            res.send({
+                loginOk: false
+            })
+        }
+    })
+
+})
 app.listen(3000)
